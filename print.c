@@ -25,7 +25,7 @@ void Permutation(int N, int depth, FILE* text)
 	int i;
 
 	if (N == depth) {
-		print(N, text);
+		print(N, text);						//Ãâ·Â
 		return;
 	}
 

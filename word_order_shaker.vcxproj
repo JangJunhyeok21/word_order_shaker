@@ -143,9 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="global.h" />
-    <ClInclude Include="input.h" />
-    <ClInclude Include="path.h" />
-    <ClInclude Include="print.h" />
+    <ClInclude Include="input.c" />
+    <ClInclude Include="path.c" />
+    <ClInclude Include="print.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

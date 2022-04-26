@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define LENGTH 100
 #pragma warning(disable:4996)
 
 int* data; //조합 세팅을 위한 정수 배열

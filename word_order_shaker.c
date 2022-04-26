@@ -1,6 +1,6 @@
-﻿#include "input.h"		//사용자 입력 관련 헤더
-#include "path.h"		//바탕화면 절대경로 추출 헤더
-#include "print.h"		//콘솔 및 TXT 출력 헤더
+﻿#include "input.c"		//사용자 입력 관련 코드
+#include "path.c"		//바탕화면 절대경로 추출
+#include "print.c"		//콘솔 및 TXT 출력
 #include "global.h"		//전역변수 및 공통 헤더파일 헤더
 
 void main()

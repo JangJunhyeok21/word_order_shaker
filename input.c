@@ -4,11 +4,32 @@
 #include "global.h"
 
 int Input() {
-	int n = 0, len = 0, count = 0, id = 0;
-	char sentence[LENGTH]; //문장을 입력 받을 곳. 한글 기준 50자 내외
+	int n = 0, len = 0, count = 0, id = 0, LENGTH = 50;
+	char ans;
+reget:
+	printf("사용할 문장이 50자가 넘습니까? (Y/N)\n>> ");
+	scanf(" %c", &ans);
+
+	switch (ans)
+	{
+	case 'Y':
+	case 'y':
+		printf("사용할 문의 길이는 몇 자 입니까?\n>> ");
+		scanf(" %d", &LENGTH);
+		break;
+	case 'N':
+	case 'n':
+		break;
+	default:
+		printf("\nY와 N 중 입력하세요.\n");
+		goto reget;
+	}
+
+	char* sentence = (char*)malloc(LENGTH * 2 * sizeof(char));	//문장을 입력 받을 곳. 한글 기준 50자 내외
 
 	printf("섞을 문장을 입력하세요.(배치 단위 구분은 '/'로 합니다. Ctrl+c입력 시 프로그램 종료.)\n>> ");
-	gets_s(sentence,sizeof(sentence)), printf("\n"); //문장 입력 받음.
+	scanf(" %[^\n]s", sentence);
+	printf("\n"); //문장 입력 받음.
 
 	//음절 및 어절 카운팅ㄱ
 	for (int i = 0; sentence[i] != '\0'; i++) {
@@ -44,6 +65,7 @@ int Input() {
 		id++;								// 인덱스 증가
 		temp = strtok(NULL, "/");			// 다음 문자열을 잘라서 포인터를 반환
 	}
+	free(sentence);
 	return n;
 }
 
